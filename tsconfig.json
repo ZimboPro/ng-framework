@@ -30,6 +30,12 @@
       ],
       "components/*": [
         "dist/components/*"
+      ],
+      "helpers": [
+        "dist/helpers"
+      ],
+      "helpers/*": [
+        "dist/helpers/*"
       ]
     }
   },
