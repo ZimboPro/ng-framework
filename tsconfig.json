@@ -24,6 +24,12 @@
       ],
       "form/*": [
         "dist/form/*"
+      ],
+      "components": [
+        "dist/components"
+      ],
+      "components/*": [
+        "dist/components/*"
       ]
     }
   },
