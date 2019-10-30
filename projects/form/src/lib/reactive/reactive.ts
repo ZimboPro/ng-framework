@@ -14,6 +14,10 @@ export class LibFormGroup<T extends IControls> extends FormGroup {
 
     controls: T;
 
+    /**
+     * Returns a  list of FormControls that are invalid and enabled within the FormGroup.
+     * The FormControls of sub FormGroups and FormArrays are not returned. 
+     */
     invalidControls(): string[] {
         const invalidControls: string[] = [];
         for (const control in this.controls) {
@@ -26,7 +30,10 @@ export class LibFormGroup<T extends IControls> extends FormGroup {
         }
         return invalidControls;
     }
-    
+    /**
+     * Returns a list of FormGroups and FormArrays that are invalid and enabled within the FormGroup.
+     * The FormGroups and FormArrays of sub FormGroups and FormArrays are not included. 
+     */
     invalidFormGroups(): string[] {
         const invalidControls: string[] = [];
         for (const control in this.controls) {
@@ -40,6 +47,10 @@ export class LibFormGroup<T extends IControls> extends FormGroup {
         return invalidControls;
     }
 
+    /**
+     * Returns a list of FormGroups, FormArrays and FormControls that are invalid and enabled within the FormGroup in no particular order.
+     * The FormGroups, FormArrays and FormControls of sub FormGroups and FormArrays are not included. 
+     */
     invalidFormGroupsAndControls() {
         const invalidControls: string[] = [];
         for (const control in this.controls) {
@@ -47,6 +58,51 @@ export class LibFormGroup<T extends IControls> extends FormGroup {
                 const element = this.controls[control];
                 if (element.invalid && element.enabled) {
                     invalidControls.push(control);
+                }
+            }
+        }
+        return invalidControls;
+    }
+
+    /**
+     * Returns a list of FormControls that are invalid and enabled within the FormGroup in no particular order.
+     * The FormControls of sub FormGroups and FormArrays are included.
+     */
+    allInvalidControls() {
+        const invalidControls: string[] = [];
+        for (const control in this.controls) {
+            if (this.controls.hasOwnProperty(control)) {
+                const element = this.controls[control];
+                if (element.invalid && element.enabled) {
+                    if (element instanceof LibFormGroup) {
+                        const invalid = element.allInvalidControls();
+                        invalidControls.push(...invalid);
+                    } else {
+                        invalidControls.push(control);
+                    }
+                }
+            }
+        }
+        return invalidControls;
+    }
+
+    /**
+     * Returns a list of FormGroups, FormArrays and FormControls that are invalid and enabled within the FormGroup in no particular order.
+     * The FormGroups, FormArrays and FormControls of sub FormGroups and FormArrays are included. 
+     */
+    allInvalidControlsAndGroups() {
+        const invalidControls: string[] = [];
+        for (const control in this.controls) {
+            if (this.controls.hasOwnProperty(control)) {
+                const element = this.controls[control];
+                if (element.invalid && element.enabled) {
+                    if (element instanceof LibFormGroup) {
+                        const invalid = element.allInvalidControls();
+                        invalidControls.push(control);
+                        invalidControls.push(...invalid);
+                    } else {
+                        invalidControls.push(control);
+                    }
                 }
             }
         }
