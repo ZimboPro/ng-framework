@@ -60,8 +60,4 @@ export class LibFormControl extends FormControl {
         this.validators = {};
         super.clearValidators();
     }
-
-    clearAsyncValidators() {
-        super.clearAsyncValidators();
-    }
 }
