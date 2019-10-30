@@ -108,4 +108,50 @@ export class LibFormGroup<T extends IControls> extends FormGroup {
         }
         return invalidControls;
     }
+
+    clearAllValidators() {
+        for (const control in this.controls) {
+            if (this.controls.hasOwnProperty(control)) {
+                const element = this.controls[control];
+                if (element.invalid && element.enabled) {
+                    if (element instanceof LibFormGroup) {
+                        element.clearAllValidators();
+                    } else {
+                        element.clearValidators();
+                    }
+                }
+            }
+        }
+    }
+
+    clearAllValues() {
+        for (const control in this.controls) {
+            if (this.controls.hasOwnProperty(control)) {
+                const element = this.controls[control];
+                if (element.invalid && element.enabled) {
+                    if (element instanceof LibFormGroup) {
+                        element.clearAllValidators();
+                    } else {
+                        element.setValue(null);
+                    }
+                }
+            }
+        }
+    }
+
+    clearValuesAndValidators() {
+        for (const control in this.controls) {
+            if (this.controls.hasOwnProperty(control)) {
+                const element = this.controls[control];
+                if (element.invalid && element.enabled) {
+                    if (element instanceof LibFormGroup) {
+                        element.clearValuesAndValidators();
+                    } else {
+                        element.setValue(null);
+                        element.clearValidators();
+                    }
+                }
+            }
+        }
+    }
 }
