@@ -28,4 +28,12 @@ export class LibFormControl extends FormControl {
     removeValidators() {
         
     }
+
+    clearValidators() {
+        super.clearValidators();
+    }
+
+    clearAsyncValidators() {
+        super.clearAsyncValidators();
+    }
 }
