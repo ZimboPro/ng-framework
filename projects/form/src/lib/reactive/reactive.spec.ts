@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
-import { LibFormGroup, Controls } from './reactive';
+import { LibFormGroup, IControls } from './reactive';
 import { FormControl } from '@angular/forms';
 
-interface Test extends Controls {
+interface Test extends IControls {
     name: FormControl
 }
 
@@ -19,6 +19,6 @@ describe('LibFormGroup', () => {
   });
   it('should be create controls and map controls to interface', () => {
     const form: LibFormGroup<Test> = new LibFormGroup<Test>({ name: new FormControl()});
-    expect(form.interfaceControls.name).toBeTruthy();
+    expect(form.controls.name).toBeTruthy();
   });
 });
