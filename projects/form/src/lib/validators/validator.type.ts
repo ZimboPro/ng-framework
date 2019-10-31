@@ -2,5 +2,9 @@
 export enum ValidatorType {
     required = 'required',
     maxLength = 'maxLength',
-    minLength = 'minLength'
+    minLength = 'minLength',
+    max = 'max',
+    min = 'min',
+    email = 'email',
+    pattern = 'pattern',
 }
