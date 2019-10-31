@@ -4,9 +4,13 @@ import { FormComponent } from './form.component';
 
 
 @NgModule({
-  declarations: [FormComponent],
+  declarations: [
+    FormComponent,
+  ],
   imports: [
   ],
-  exports: [FormComponent]
+  exports: [
+    FormComponent
+  ]
 })
 export class FormModule { }
