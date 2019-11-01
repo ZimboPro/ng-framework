@@ -1,0 +1,21 @@
+{
+  "name": "@lib/form",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^8.2.11",
+    "@angular/core": "^8.2.11"
+  },
+  "main": "bundles/lib-form.umd.js",
+  "module": "fesm5/lib-form.js",
+  "es2015": "fesm2015/lib-form.js",
+  "esm5": "esm5/lib-form.js",
+  "esm2015": "esm2015/lib-form.js",
+  "fesm5": "fesm5/lib-form.js",
+  "fesm2015": "fesm2015/lib-form.js",
+  "typings": "lib-form.d.ts",
+  "metadata": "lib-form.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

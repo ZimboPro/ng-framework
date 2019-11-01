@@ -1,5 +1,8 @@
 {
   "compileOnSave": false,
+  "exclude": [
+    "**/public_api.ts"
+  ],
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
@@ -19,23 +22,23 @@
       "dom"
     ],
     "paths": {
-      "form": [
-        "dist/form"
+      "@lib/form": [
+        "dist/lib/form"
       ],
-      "form/*": [
-        "dist/form/*"
+      "@lib/form/*": [
+        "dist/lib/form/*"
       ],
-      "components": [
-        "dist/components"
+      "@lib/components": [
+        "dist/lib/components"
       ],
-      "components/*": [
-        "dist/components/*"
+      "@lib/components/*": [
+        "dist/lib/components/*"
       ],
-      "helpers": [
-        "dist/helpers"
+      "@lib/helpers": [
+        "dist/lib/helpers"
       ],
-      "helpers/*": [
-        "dist/helpers/*"
+      "@lib/helpers/*": [
+        "dist/lib/helpers/*"
       ]
     }
   },

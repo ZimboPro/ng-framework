@@ -10,7 +10,19 @@
     "e2e": "ng e2e",
     "test-form": "ng test form --browsers=ChromeHeadless",
     "test-helpers": "ng test helpers --browsers=ChromeHeadless",
-    "test-components": "ng test components --browsers=ChromeHeadless"
+    "test-components": "ng test components --browsers=ChromeHeadless",
+    "deps:remove": "rm -rf node_modules/@lib && rm -f package-lock.json",
+    "deps:install": "npm i",
+    "deps": "npm run deps:remove && npm run deps:install",
+    "build:components": "ng build @lib/components",
+    "build:form": "ng build @lib/form",
+    "build:helpers": "ng build @lib/helpers",
+    "npm-pack:components": "cd dist/lib/components && npm pack",
+    "npm-pack:form": "cd dist/lib/form && npm pack",
+    "npm-pack:helpers": "cd dist/lib/helpers && npm pack",
+    "package:components": "npm run build:components && npm run npm-pack:components",
+    "package:form": "npm run build:form && npm run npm-pack:form",
+    "package:helpers": "npm run build:helpers && npm run npm-pack:helpers"
   },
   "private": true,
   "dependencies": {

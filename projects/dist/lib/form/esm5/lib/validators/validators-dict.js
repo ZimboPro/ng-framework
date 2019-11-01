@@ -1,0 +1,18 @@
+var _a;
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { ValidatorType } from './validator.type';
+import { Validators } from '@angular/forms';
+/** @type {?} */
+export var ValidatorsDict = (_a = {},
+    _a[ValidatorType.required] = Validators.required,
+    _a[ValidatorType.maxLength] = Validators.maxLength,
+    _a[ValidatorType.minLength] = Validators.minLength,
+    _a[ValidatorType.max] = Validators.max,
+    _a[ValidatorType.min] = Validators.min,
+    _a[ValidatorType.email] = Validators.email,
+    _a[ValidatorType.pattern] = Validators.pattern,
+    _a);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidmFsaWRhdG9ycy1kaWN0LmpzIiwic291cmNlUm9vdCI6Im5nOi8vQGxpYi9mb3JtLyIsInNvdXJjZXMiOlsibGliL3ZhbGlkYXRvcnMvdmFsaWRhdG9ycy1kaWN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBQUEsT0FBTyxFQUFFLGFBQWEsRUFBRSxNQUFNLGtCQUFrQixDQUFDO0FBQ2pELE9BQU8sRUFBRSxVQUFVLEVBQUUsTUFBTSxnQkFBZ0IsQ0FBQzs7QUFFNUMsTUFBTSxLQUFPLGNBQWM7SUFDdkIsR0FBQyxhQUFhLENBQUMsUUFBUSxJQUFHLFVBQVUsQ0FBQyxRQUFRO0lBQzdDLEdBQUMsYUFBYSxDQUFDLFNBQVMsSUFBRyxVQUFVLENBQUMsU0FBUztJQUMvQyxHQUFDLGFBQWEsQ0FBQyxTQUFTLElBQUcsVUFBVSxDQUFDLFNBQVM7SUFDL0MsR0FBQyxhQUFhLENBQUMsR0FBRyxJQUFHLFVBQVUsQ0FBQyxHQUFHO0lBQ25DLEdBQUMsYUFBYSxDQUFDLEdBQUcsSUFBRyxVQUFVLENBQUMsR0FBRztJQUNuQyxHQUFDLGFBQWEsQ0FBQyxLQUFLLElBQUcsVUFBVSxDQUFDLEtBQUs7SUFDdkMsR0FBQyxhQUFhLENBQUMsT0FBTyxJQUFHLFVBQVUsQ0FBQyxPQUFPO09BQzlDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgVmFsaWRhdG9yVHlwZSB9IGZyb20gJy4vdmFsaWRhdG9yLnR5cGUnO1xyXG5pbXBvcnQgeyBWYWxpZGF0b3JzIH0gZnJvbSAnQGFuZ3VsYXIvZm9ybXMnO1xyXG5cclxuZXhwb3J0IGNvbnN0IFZhbGlkYXRvcnNEaWN0ID0ge1xyXG4gICAgW1ZhbGlkYXRvclR5cGUucmVxdWlyZWRdOiBWYWxpZGF0b3JzLnJlcXVpcmVkLFxyXG4gICAgW1ZhbGlkYXRvclR5cGUubWF4TGVuZ3RoXTogVmFsaWRhdG9ycy5tYXhMZW5ndGgsXHJcbiAgICBbVmFsaWRhdG9yVHlwZS5taW5MZW5ndGhdOiBWYWxpZGF0b3JzLm1pbkxlbmd0aCxcclxuICAgIFtWYWxpZGF0b3JUeXBlLm1heF06IFZhbGlkYXRvcnMubWF4LFxyXG4gICAgW1ZhbGlkYXRvclR5cGUubWluXTogVmFsaWRhdG9ycy5taW4sXHJcbiAgICBbVmFsaWRhdG9yVHlwZS5lbWFpbF06IFZhbGlkYXRvcnMuZW1haWwsXHJcbiAgICBbVmFsaWRhdG9yVHlwZS5wYXR0ZXJuXTogVmFsaWRhdG9ycy5wYXR0ZXJuLFxyXG59Il19
