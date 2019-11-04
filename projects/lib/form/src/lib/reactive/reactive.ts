@@ -2,7 +2,8 @@ import { FormGroup, AbstractControl, ValidatorFn, AbstractControlOptions, AsyncV
 import { LibFormControl } from './control';
 
 export interface IControls {
-    [key: string]: LibFormControl;
+    // [key: string]: LibFormControl;
+    [key: string]: AbstractControl;
 }
 
 export class LibFormGroup<T extends IControls> extends FormGroup {
