@@ -1,7 +1,8 @@
 import { FormGroup, AbstractControl, ValidatorFn, AbstractControlOptions, AsyncValidatorFn, AbstractControlDirective, FormControl, FormArray } from '@angular/forms'
+import { LibFormControl } from './control';
 
 export interface IControls {
-    [key: string]: AbstractControl;
+    [key: string]: LibFormControl;
 }
 
 export class LibFormGroup<T extends IControls> extends FormGroup {
@@ -130,7 +131,7 @@ export class LibFormGroup<T extends IControls> extends FormGroup {
                 const element = this.controls[control];
                 if (element.invalid && element.enabled) {
                     if (element instanceof LibFormGroup) {
-                        element.clearAllValidators();
+                        element.clearAllValues();
                     } else {
                         element.setValue(null);
                     }
