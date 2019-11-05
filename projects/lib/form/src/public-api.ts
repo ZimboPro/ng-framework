@@ -9,4 +9,3 @@ export * from './lib/form.module';
 export * from './lib/validators/public.api';
 export * from './lib/reactive/public.api';
 export * from './lib/components/public.api';
-export * from './lib/common/public.api';
