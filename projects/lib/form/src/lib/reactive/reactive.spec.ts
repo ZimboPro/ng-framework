@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
-import { LibFormGroup, IControls } from './reactive';
-import { FormControl } from '@angular/forms';
+
 import { LibFormControl } from './control';
+import { IControls, LibFormGroup } from './reactive';
 
 interface Test extends IControls {
     name: LibFormControl

@@ -1,5 +1,5 @@
-import { IControls } from './reactive';
 import { LibFormControl } from './control';
+import { IControls } from './reactive';
 
 export class LibControlsClass implements IControls {
     [key: string]: LibFormControl;

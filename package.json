@@ -14,6 +14,7 @@
     "deps:remove": "rm -rf node_modules/@lib && rm -f package-lock.json",
     "deps:install": "npm i",
     "deps": "npm run deps:remove && npm run deps:install",
+    "clean": "npm run deps && rm -rf dist/",
     "build:components": "ng build @lib/components",
     "build:form": "ng build @lib/form",
     "build:helpers": "ng build @lib/helpers",

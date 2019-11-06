@@ -1,5 +1,6 @@
-import { ValidatorType } from './validator.type';
 import { Validators } from '@angular/forms';
+
+import { ValidatorType } from './validator.type';
 
 export const ValidatorsDict = {
     [ValidatorType.required]: Validators.required,
