@@ -18,12 +18,16 @@
     "build:components": "ng build @lib/components",
     "build:form": "ng build @lib/form",
     "build:helpers": "ng build @lib/helpers",
+    "build:interfaces": "ng build @lib/interfaces",
     "npm-pack:components": "cd dist/lib/components && npm pack",
     "npm-pack:form": "cd dist/lib/form && npm pack",
     "npm-pack:helpers": "cd dist/lib/helpers && npm pack",
+    "npm-pack:interfaces": "cd dist/lib/interfaces && npm pack",
     "package:components": "npm run build:components && npm run npm-pack:components",
     "package:form": "npm run build:form && npm run npm-pack:form",
-    "package:helpers": "npm run build:helpers && npm run npm-pack:helpers"
+    "package:helpers": "npm run build:helpers && npm run npm-pack:helpers",
+    "package:interfaces": "npm run build:interfaces && npm run npm-pack:interfaces",
+    "package": "package:components && package:form && package:helpers && package:interfaces"
   },
   "private": true,
   "dependencies": {

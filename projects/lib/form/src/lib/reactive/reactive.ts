@@ -166,6 +166,10 @@ export class LibFormArray<T extends IControl> extends FormArray {
         this.controls = controls;
     }
 
+    atIndex(index: number): T {
+        return this.controls[index] as T;
+    }
+
     controls: T[];
 
     /**
