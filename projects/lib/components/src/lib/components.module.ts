@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
-import { ComponentsComponent } from './components.component';
+
+import { LazyLoadModule } from './lazy-load/public.api';
 
 
 
 @NgModule({
-  declarations: [ComponentsComponent],
+  declarations: [],
   imports: [
+    LazyLoadModule
   ],
-  exports: [ComponentsComponent]
+  exports: [LazyLoadModule]
 })
 export class ComponentsModule { }

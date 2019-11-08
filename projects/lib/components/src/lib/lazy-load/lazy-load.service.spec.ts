@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ComponentsService } from './components.service';
+import { LazyLoadService } from './lazy-load.service';
 
-describe('ComponentsService', () => {
+describe('LazyLoadService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: ComponentsService = TestBed.get(ComponentsService);
+    const service: LazyLoadService = TestBed.get(LazyLoadService);
     expect(service).toBeTruthy();
   });
 });
