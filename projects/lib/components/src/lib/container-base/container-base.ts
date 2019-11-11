@@ -7,7 +7,7 @@ export abstract class ContainerBaseComponent<T extends IControls> implements OnI
 
   form: LibFormGroup<T>;
   subscriptions: Subscription[];
-  private _data: ControlContainer
+  _data: ControlContainer
 
   constructor(
     private _injector: Injector
