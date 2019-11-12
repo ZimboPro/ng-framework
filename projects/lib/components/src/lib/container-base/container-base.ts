@@ -1,32 +1,30 @@
-import { OnInit, Injector, OnDestroy } from '@angular/core';
+import { OnInit, Injector, OnDestroy, Input } from '@angular/core';
 import { IControls, LibFormGroup } from '@lib/form';
 import { ControlContainer } from '@angular/forms';
-import { Subscription } from 'rxjs';
+import { SubscriberBase } from './subscriber-base';
 
-export abstract class ContainerBaseComponent<T extends IControls> implements OnInit, OnDestroy {
+export abstract class ContainerBaseComponent<T extends IControls> extends SubscriberBase implements OnInit {
 
-  form: LibFormGroup<T>;
-  subscriptions: Subscription[];
+  @Input() form: LibFormGroup<T>;
   _data: ControlContainer
 
   constructor(
     private _injector: Injector
-  ) { }
+  ) { 
+    super();
+  }
 
   private _assign(data) {
-    this.form = data as LibFormGroup<T>;
+    this.form = (data.controls || data) as LibFormGroup<T>;
   }
-
+  
   ngOnInit() {
-    if (!this._data) {
-      this._data = this._injector.get(ControlContainer);
+    if (!this.form) {
+      if (!this._data) {
+        this._data = this._injector.get(ControlContainer);
+      }
+      this._assign(this._data);
     }
-    this._assign(this._data);
-  }
-
-  ngOnDestroy() {
-    for (const sub of this.subscriptions) {
-      sub.unsubscribe();
-    }
+    this.subscriptions = [];
   }
 }
