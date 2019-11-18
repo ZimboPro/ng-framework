@@ -4,7 +4,7 @@ import { MatFormField } from '@angular/material';
 import { SubscriberBase } from '../../container-base/subscriber-base';
 
 @Component({
-  selector: '[libError]',
+  selector: '[lib-error]',
   template: `<div> Error: {{ errorMessage }} </div>`,
 })
 export class ErrorComponent extends SubscriberBase implements AfterContentInit {
@@ -14,6 +14,7 @@ export class ErrorComponent extends SubscriberBase implements AfterContentInit {
     @Optional() @Host() private formFieldInput: MatFormField
   ) {
     super();
+    console.log('create')
   }
 
   ngAfterContentInit() {

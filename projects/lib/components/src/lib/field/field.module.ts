@@ -11,6 +11,9 @@ import { MatFormFieldModule } from "@angular/material";
     CommonModule,
     MatFormFieldModule
   ],
-  exports: [ErrorComponent]
+  exports: [
+    ErrorComponent,
+    MatFormFieldModule
+  ]
 })
 export class FieldModule { }

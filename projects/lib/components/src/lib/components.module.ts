@@ -1,16 +1,27 @@
-import { NgModule, Type } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { LazyLoadModule } from './lazy-load/public.api';
 import { FieldModule } from './field/field.module';
+import { ErrorStateMatcher } from '@angular/material';
+import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 
-const Components: (any[] | Type<any>)[] = [
-  LazyLoadModule,
-  FieldModule
-]
+export class ESM implements ErrorStateMatcher {
+  isErrorState(control: FormControl, form: FormGroupDirective | NgForm): boolean {
+    return !!(control && control.enabled && control.invalid) || !!(form && form.enabled && form.invalid);
+  }
+
+}
+
 
 @NgModule({
   declarations: [],
-  imports: Components,
-  exports: Components
+  imports: [
+    LazyLoadModule,
+    FieldModule
+  ],
+  exports: [
+    LazyLoadModule,
+    FieldModule
+  ]
 })
 export class ComponentsModule { }
