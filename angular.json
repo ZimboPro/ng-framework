@@ -8,6 +8,10 @@
       "root": "projects/lib/form",
       "sourceRoot": "projects/lib/form/src",
       "prefix": "lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -43,6 +47,10 @@
       "root": "projects/lib/components",
       "sourceRoot": "projects/lib/components/src",
       "prefix": "lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -78,6 +86,10 @@
       "root": "projects/lib/helpers",
       "sourceRoot": "projects/lib/helpers/src",
       "prefix": "lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -113,6 +125,10 @@
       "root": "projects/lib/interfaces",
       "sourceRoot": "projects/lib/interfaces/src",
       "prefix": "lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
