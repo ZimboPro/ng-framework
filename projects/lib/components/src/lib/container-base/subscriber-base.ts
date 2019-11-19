@@ -8,5 +8,6 @@ export abstract class SubscriberBase implements OnDestroy {
     for (const sub of this.subscriptions) {
       sub.unsubscribe();
     }
+    this.subscriptions = [];
   }
 }

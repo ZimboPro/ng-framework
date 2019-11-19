@@ -7,7 +7,7 @@ import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 
 export class ESM implements ErrorStateMatcher {
   isErrorState(control: FormControl, form: FormGroupDirective | NgForm): boolean {
-    return !!(control && control.enabled && control.invalid) || !!(form && form.enabled && form.invalid);
+    return !!(control && control.enabled && control.invalid);
   }
 
 }
